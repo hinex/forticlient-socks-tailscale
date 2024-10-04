@@ -3,7 +3,7 @@
 ## Motivation
 
 1. The FortiClient service in the container is designed for users to connect to a VPN with proxy support, which is important in situations where bypassing network restrictions or routing traffic through a specific proxy server is required.
-2. Tailscale is used to create a secure network infrastructure that connects all devices (containers, servers, workstations) through secure tunnels. It is especially useful for remote access to resources and building distributed networks.```
+2. Tailscale is used to create a secure network infrastructure that connects all devices (containers, servers, workstations) through secure tunnels. It is especially useful for remote access to resources and building distributed networks.
 
 
 ## .env

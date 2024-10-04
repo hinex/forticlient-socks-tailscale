@@ -1,0 +1,21 @@
+services:
+  forticlient:
+    image: henry42/forticlient-with-proxy
+    container_name: forti-client
+    privileged: true
+    env_file:
+      - .env
+    restart: always
+    network_mode: service:tailscale
+  tailscale:
+    image: tailscale/tailscale:latest
+    container_name: tailscale
+    env_file:
+      - .env
+    volumes:
+      - ./tailscale-data:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - net_admin
+      - sys_module
+    restart: unless-stopped

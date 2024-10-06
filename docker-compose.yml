@@ -14,6 +14,7 @@ services:
       - .env
     volumes:
       - ./tailscale-data:/var/lib/tailscale
+      - ./tailscale-run:/var/run/tailscale
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - net_admin
